@@ -10,20 +10,18 @@ body{
     width: 100%;
     display: flex;
     position: absolute;
-    z-index: -1;
-    justify-content: space-around;
     align-items: center;
+    justify-content: center;
+    gap: 2%;
 }
 .quadrado{
     width: 200px;
     height: 200px;
     border: solid;
     background-color: aqua;
-
 }
 .q1{
     animation: subirDescer  4s linear  2s infinite;
-    margin-left: 20%;
 }
 
 .q2{
@@ -31,7 +29,6 @@ body{
 }
 .q3{
     animation: subirDescer 4s linear 6s infinite;
-    margin-right: 20%;
 }
 @keyframes subirDescer{
     25%{
@@ -96,6 +93,7 @@ body{
     position: relative;
     justify-content: center;
     align-items: end;
+    z-index: 2;
 }
 .andar{
     animation: andarSaida 2s linear forwards;

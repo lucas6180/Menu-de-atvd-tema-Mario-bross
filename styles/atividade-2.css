@@ -9,15 +9,14 @@ body{
     height: 100%;
     width: 100%;
     display: flex;
-    position: relative;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
 }
 .quadrado{
     width: 200px;
     height: 200px;
     border: solid;
-    margin-left: 28%;
-    margin-top: 16%;
-    margin-right: 10%;
     background-color: aqua;
     position: relative;
 }
@@ -75,6 +74,7 @@ body{
     position: relative;
     justify-content: center;
     align-items: end;
+    z-index: 2;
 }
 .andar{
     animation: andarSaida 2s linear forwards;

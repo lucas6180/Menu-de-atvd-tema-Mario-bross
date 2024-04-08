@@ -11,13 +11,14 @@ body{
     display: flex;
     position: absolute;
     z-index: -1;
+    justify-content: center;
+    align-items: center;
 }
 
 .quadrado{
     width: 200px;
     height: 200px;
     border: solid;
-    margin: auto;
     background-color: aqua;
     animation: mover 3s linear;
 }
