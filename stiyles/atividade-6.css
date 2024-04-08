@@ -1,0 +1,148 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+.ref{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    z-index: -1;
+}
+
+.quadrado{
+    width: 200px;
+    height: 200px;
+    border: solid;
+    margin: auto;
+    position: relative;
+    background-color: aqua;
+    animation: mover 15s linear;
+}
+@keyframes mover {
+  0%{
+
+  }
+  
+12.5%{
+    transform: rotate(45deg);
+    }
+    25%{
+        transform: rotate(90deg);
+         background-color: blue;
+    }
+    37.5%{
+        transform: rotate(135deg);
+        background-color: blueviolet;
+    }
+    50%{
+        transform: translate(180deg);
+        background-color: rgb(255, 0, 119);
+    }
+    62.5%{
+        transform: rotate(225deg);
+        background-color: red;
+    }
+    75%{
+        transform: rotate(270deg);
+        background-color: rgb(65, 28, 28);
+    } 
+    87.5%{
+        transform: rotate(315deg);
+        background-color: rgb(187, 187, 187); 
+    }
+    100%{
+        transform: rotate(360deg);
+        background-color: rgb(0, 0, 0); 
+    }
+    
+}
+#cenario{
+    position: relative ;
+    width: 30vh;
+}
+#botao-voltar{
+    width: 10vh;
+    height: 7vh;
+    font-size: 5vh;
+    background-image: url(../assets/seta-voltar.png);
+    background-size: 99% 105%;
+    outline: 0;
+    top: 10%;
+    left: 70%;
+    outline: 0;
+    background-color: rgb(223, 0, 0);
+    border: solid rgb(139, 0, 0) 1px;
+    box-shadow: 0px 3px 0px 2px rgb(116, 0, 0),
+    0px 3px 0px 3px black,
+    6px 9px 2px 0px rgb(82, 82, 82);
+    position: absolute;
+    border-radius: 5px;
+}
+#botao-voltar:active{
+    box-shadow:  0px 3px 0px 2px rgb(116, 0, 0),
+    0px 3px 0px 3px black;
+    transform: translateY(5px);
+}
+#mario{
+    position: relative;
+    opacity: 0;
+    height: 40px;
+    bottom: 14.6vh;
+    right: 25vh;
+    position: absolute;
+}
+#mario-estatico{
+    height: 40px;
+    bottom: 14.6vh;
+    right: 24vh;
+    position: absolute;
+
+}
+
+.voltar{
+    height: 30vh;
+    top: 70%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: end;
+}
+.andar{
+    animation: andarSaida 2s linear forwards;
+    z-index: -1;
+
+    
+}
+.esconder{
+    opacity: 0; 
+}
+@keyframes andarSaida{
+    0%{
+        opacity: 1;
+    }
+    15%{
+        transform: translateX(20px);
+    }
+    25%{
+        transform: translate(60px, -10px);
+    }
+    35%{
+        transform: translate(104px 50px);
+    }
+    50%{
+        transform: translate(109px, 60px);
+    }
+    55%{
+        transform: translate(109px, 80px);
+    }
+    100%{
+        transform: translate(109px, 80px);
+        opacity: 1;
+    }
+}
+
+

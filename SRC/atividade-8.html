@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 8</title>
+    <link rel="stylesheet" href="../stiyles/atividade-8.css">
+</head>
+<body>
+    <div class="voltar">
+        <img id="cenario" src="../assets/saida4.png" alt="">
+        <img id="mario-estatico" src="../assets/marioparado.png" alt="">
+        <img id="mario" src="../assets/mario-ezgif.com-resize (1).gif" alt=""> 
+        <button id="botao-voltar"></button>
+    </div>
+    <div class="ref">
+        <div class="circulo"></div>
+    </div>
+
+    <audio id="efeito-sonoro" preload="auto">
+        <source src="/assets/26 Secret Exit!.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+var sair, marioB, marioP, marioF;
+
+marioB = document.getElementById('mario');
+marioP = document.getElementById('mario-estatico');
+sair = document.getElementById('botao-voltar');
+
+sair.addEventListener('click', andar);
+
+function andar() {
+    if (!marioB.classList.contains('andar')) {
+        marioB.classList.add('andar');
+        marioP.classList.add('esconder');
+        setTimeout(function() {
+            window.location.href = '../index.html';
+        }, 1800); 
+    }
+}
+
+sair.addEventListener('click', function() {
+    setTimeout(function() {
+        tocarSom();
+    }, 1000);
+});
+
+function tocarSom() {
+    var audio = document.getElementById("efeito-sonoro");
+    audio.currentTime = 0;
+    audio.play();
+}
+
+    </script>
+</body>
+</html>
