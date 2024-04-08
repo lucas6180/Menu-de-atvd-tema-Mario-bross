@@ -36,3 +36,4 @@ var audio = document.getElementById("efeito-sonoro");
 audio.currentTime = 0;
 audio.play();
 }
+
