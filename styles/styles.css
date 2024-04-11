@@ -1,0 +1,136 @@
+body{
+    margin: 0;
+    padding: 0;
+  
+    background-image: url(../assets/fundo.gif);
+    background-size: 99% 99%;
+}
+.ref{
+    border: solid;
+    height: 99vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu{
+    display: flex;
+    width: 39%;
+    min-width: 200px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 88vh;
+    border: solid white;
+    box-sizing: border-box;
+    align-items: center;
+}
+.numero-atividade{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 1vw;
+    min-height: 34px;
+    font-size: calc(2vw + 8px);
+    text-align: center;
+    font-family: fantasy;
+    color: red;
+    -webkit-text-stroke: 1px black;
+}
+/*botão com lucky block de imagem de fundo*/
+.botão{
+    box-shadow: -4px 1px 4px 5px rgba(0, 0, 0, 0.514);
+    width: 6vw;
+    height: 6vw;
+    min-width: 50px;
+    min-height: 50px;
+    border: 0;
+    position: relative;
+    background-image: url(../assets/interrogação2.png);
+    background-size: cover;
+    overflow: hidden;
+    outline: 0;
+    z-index: 1;
+    margin-left: calc(0.5vw + 2.5px);
+    margin-right: calc(0.5vw + 2.5px);
+}
+/*Card contendo a imagem de um cogumelo e um respectivo número que será aplicado a animação de subir e piscar*/
+.card-animado{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 5.85vw;
+    height: 6vw;
+    min-width: 48px;
+    min-height: 10px;
+    position: absolute;
+    flex-direction: column;
+    opacity: 0;
+    z-index: 1;
+    border: solid white 1px;
+}
+/* efeito de brilho ativado ao clicar no botão com a imagem de um Lucky Block */
+.botão:active{
+    animation: brilhar 0.1s 2 linear forwards;
+    
+}
+.botão:hover{
+    filter: brightness(2.5) saturate(1.5);
+    box-shadow: 0px 0px 7px 0px yellow;
+}
+/* imagem do cogumelo que fica dentro do card-animado*/
+.cogumelo-img{
+    width: 3.2vw;
+    height: 3.2vw;
+    min-width: 30px;
+    min-height: 33px;
+    position: absolute;
+}
+
+/* efeito que será aplicado ao card-animado quando o mesmo for clicado */
+.subir {
+    transform: translateY(-6vw);
+    transition: transform 1s; 
+    animation: piscar 2s linear 1 forwards;
+    cursor: pointer;
+
+}
+.clique{
+    font-family: cursive;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    position: relative;
+    font-size: calc(0.8vw + 6px);
+    text-shadow: 0px 1px 0px black;
+    -webkit-text-stroke: 0.7px black;
+
+}
+@keyframes piscar{
+    5%, 20%{
+        opacity: 0;
+    }
+    10%, 100%{
+        opacity: 1;
+    }
+}
+@keyframes brilhar{
+    0%, 50%{
+        filter: brightness(0);
+    }
+    25%, 100%{
+        filter: brightness(5);
+    }
+ }
+
+ @media screen and (min-width: 649px){
+    
+    .menu{
+        display: flex;
+        width: 39%;
+        min-width: 350px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        height: 88vh;
+        box-sizing: border-box;
+        align-items: center;
+    }
+
+ }
