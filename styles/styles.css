@@ -3,7 +3,7 @@ body{
     padding: 0;
   
     background-image: url(../assets/fundo.gif);
-    background-size: 99% 99%;
+    background-size: 99vw 99%;
 }
 .ref{
     border: solid;
