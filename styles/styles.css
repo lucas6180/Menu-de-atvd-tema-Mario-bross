@@ -58,7 +58,7 @@ body{
     justify-content: end;
     width: 5.85vw;
     height: 6vw;
-    min-width: 48px;
+    min-width: 43px;
     min-height: 10px;
     position: absolute;
     flex-direction: column;
