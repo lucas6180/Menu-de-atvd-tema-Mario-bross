@@ -93,15 +93,7 @@ body{
     cursor: pointer;
 
 }
-.clique{
-    font-family: monospacegit;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    position: relative;
-    font-size: calc(0.8vw + 6px);
-    -webkit-text-stroke: 0.1vw black;
 
-}
 @keyframes piscar{
     5%, 20%{
         opacity: 0;
